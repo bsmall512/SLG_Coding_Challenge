@@ -1,0 +1,19 @@
+{
+  "name": "slg-challenge",
+  "version": "0.1.0",
+  "description": "",
+  "authors": [
+    "Brian Small"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "devDependencies": {},
+  "dependencies": {
+    "angular": "1.5.10"
+  }
+}

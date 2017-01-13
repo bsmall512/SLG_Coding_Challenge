@@ -1,0 +1,19 @@
+<div class='cart-container'>
+  <div class='cart'>
+    <div class="title">Cart</div>
+    <ul class='items'>
+      <li ng-if="count === 0" class='empty'>Your Cart Is Empty.</li>
+      <li class='item' ng-repeat='product in data'>
+        <div class='remove' ng-click="set(product.code, 0)"></div>
+        <span class='item_name'>{{product.code}} - {{product.name}}</span>
+        <span class='item_price'>{{product.total | currency:"$"}}</span>
+        <input type="number" ng-model="product.count" ng-change="set(product.code, product.count)">
+      </li>
+    </ul>
+    <div ng-if="count !== 0" class='total'>
+      <div class='amount' ng-class="{large: total > 999, larger: total > 9999}" ng-maxlength="4">
+        {{total | currency:"$"}}
+      </div>
+    </div>
+  </div>
+</div>
